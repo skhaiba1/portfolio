@@ -98,7 +98,10 @@ body {
 .desktop {
   width: 100vw;
   height: 100vh;
-  background: url('/bliss.jpg') center/cover no-repeat;
+  /* Fallback gradient inspired by Windows XP Bliss */
+  background: linear-gradient(to bottom, #5a9fd4 0%, #6db3f2 20%, #87ceeb 40%, #98d8c8 60%, #76b583 80%, #4a934a 100%);
+  /* If bliss.jpg exists, it will override */
+  background: url('/bliss.jpg') center/cover no-repeat, linear-gradient(to bottom, #5a9fd4 0%, #6db3f2 20%, #87ceeb 40%, #98d8c8 60%, #76b583 80%, #4a934a 100%);
   position: relative;
   overflow: hidden;
 }
